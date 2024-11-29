@@ -54,3 +54,21 @@ console.log(clonedStudent);
 const newCourses = ["Biology", "Chemistry"];
 const allCourses = [...student.courses, ...newCourses];
 console.log(allCourses); 
+
+// 5. Object Methods
+
+// add method to push new course
+student.addCourse = function(course) {
+    this.courses.push(course);
+  };
+
+  // add a method to calculate total courses
+  student.totalCourses = function() {
+    return this.courses.length;
+  };
+
+  // output to console
+  student.addCourse("Astronomy");
+  console.log(student.courses); // putputs to old student object not cloned 
+  console.log(student.totalCourses()); // should be 4
+  
