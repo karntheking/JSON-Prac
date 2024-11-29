@@ -1,4 +1,5 @@
-// Creating student object for later manipulation
+// 1. Creating student object for later manipulation
+
 // Create a student object
 const student = {
     name: "John Snow",
@@ -17,3 +18,15 @@ const student = {
   // Call and log the displayInfo method
   console.log(student.displayInfo());
   
+// 2. Working with JSON
+
+// Convert object to JSON string
+const studentJSON = JSON.stringify(student);
+console.log(studentJSON);
+
+// Convert JSON string back to object
+const newStudentObject = JSON.parse(studentJSON);
+console.log(newStudentObject);
+
+// Compare original and new object
+console.log(student === newStudentObject); // should be false
