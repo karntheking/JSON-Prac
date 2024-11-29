@@ -42,5 +42,15 @@ console.log(courses);
 const scores = [85, 92, 78, 90];
 const [score1, score2] = scores;
 console.log(score1); 
-console.log(score2); // upon switching to score2, and score 4 the console is still displaying score1 and score2 from the array
+console.log(score2); 
 
+// 4. The Spread Operator
+
+// clone the student object
+const clonedStudent = { ...student, graduationYear: 2025 };
+console.log(clonedStudent);
+
+// Merge two arrays
+const newCourses = ["Biology", "Chemistry"];
+const allCourses = [...student.courses, ...newCourses];
+console.log(allCourses); 
