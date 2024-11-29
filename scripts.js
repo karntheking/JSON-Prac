@@ -2,7 +2,7 @@
 
 // Create a student object
 const student = {
-    name: "John Snow",
+    name: "Jon Snow",
     age: 20,
     enrolled: true,
     courses: ["Math", "Physics", "Computer Science"],
@@ -12,7 +12,7 @@ const student = {
   };
   
   // Output name and age
-  console.log(student.name); // John Doe
+  console.log(student.name); // Jon Snow
   console.log(student.age); // 21
   
   // Call and log the displayInfo method
@@ -30,3 +30,17 @@ console.log(newStudentObject);
 
 // Compare original and new object
 console.log(student === newStudentObject); // should be false
+
+// 3. Using destructuring assignment
+
+// Extract name and courses from student object
+const { name, courses } = student;
+console.log(name); 
+console.log(courses); 
+
+// Create and destructure array of scores
+const scores = [85, 92, 78, 90];
+const [score1, score2] = scores;
+console.log(score1); 
+console.log(score2); // upon switching to score2, and score 4 the console is still displaying score1 and score2 from the array
+
